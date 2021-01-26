@@ -1,0 +1,16 @@
+type MainDetails @model {
+  id: ID!
+  name: String!
+  lastName: String!
+  email: AWSEmail!
+  location: String
+  description: String
+  skills: [Skill] @connection(keyName: "bySkill", fields: ["id"])
+}
+
+type Skill @model @key(name: "bySkill", fields: ["skillID"]) {
+  id: ID!
+  name: String!
+  skillID: ID!
+  mainDetails: MainDetails @connection(fields: ["skillID"])
+}
