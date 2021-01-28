@@ -11,7 +11,6 @@ export const onCreateMainDetails = /* GraphQL */ `
       location
       description
       skills {
-        id
         items {
           id
           name
@@ -88,15 +87,14 @@ export const onCreateSkill = /* GraphQL */ `
         location
         description
         skills {
-          id
-          name
+          items {
+            id
+            name
+            skillID
+          }
           nextToken
         }
-        createdAt
-        updatedAt
       }
-      createdAt
-      updatedAt
     }
   }
 `;

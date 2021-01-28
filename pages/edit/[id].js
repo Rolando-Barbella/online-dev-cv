@@ -20,7 +20,6 @@ const UpdateDetails = ({ mainDetails }) => {
   });
   
   useEffect(() => {
-    console.log(mainDetails)
     setOnChangeDetail(mainDetails);
   },[]);
  
@@ -122,8 +121,8 @@ const UpdateDetails = ({ mainDetails }) => {
         </div>
       </div>
       <SkillsUpdate 
-        skills={onChangeDetail.skills.items}
-        id={onChangeDetail.id} 
+        skills={mainDetails.skills.items}
+        id={mainDetails.id} 
       />
       <div className="text-center mt-1 px-4 py-5 space-y-6 sm:p-6">
         <button 
