@@ -1,6 +1,5 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
-// 3f35f313-6964-4303-bb17-c433356d8a49
 export const createMainDetails = /* GraphQL */ `
   mutation CreateMainDetails(
     $input: CreateMainDetailsInput!
